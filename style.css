@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(187, 187, 245);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    width: 350px;
+    height: 500px;
+    box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+    perspective: 1000px
+}
+
+.inner-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover; /*https://images.unsplash.com/photo-1514675239066-bd9d6d21c926?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGV4dCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80*/
+    background-image: linear-gradient(rgba(0,0,100,0.8),rgba(0,0,100,0.8)),url(https://i.pinimg.com/originals/af/8d/63/af8d63a477078732b79ff9d9fc60873f.jpg);
+    padding: 55px;
+    box-sizing:border-box;
+    backface-visibility: hidden;
+    
+
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card h2 {
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    
+}
+
+.input-box {
+    width: 100%;
+    height: 32px;
+    background: transparent;
+    margin: 6px 0;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+::placeholder {
+    color: #fff;
+    font-size: 12px;
+}
+button {
+    width: 100%;
+    height: 32px;
+    background: transparent;
+    margin: 35px 0 10px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+
+}
+.submit-btn {
+    position: relative;
+
+}
+
+.submit-btn::after {
+    content: '\27a4';
+    color: #333;
+    background:#fff;
+    height: 32px;
+    width: 32px;
+    font-size: 20px;
+    border-radius: 50%;
+    position: absolute;
+    right: -1px ;
+    top: -1px;
+    text-align: center
+    
+}
+
+span {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.card .btn {
+    color: #fff;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.card .btn:hover {
+    background: #fff;
+    color: rgb(17, 15, 15);
+    font-weight: bold;
+    transition: .5s;
+}
+
+.card a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.card a:hover{
+    color: rgb(136, 134, 134);
+    text-decoration: underline;
+    transition: .5s;
+}
